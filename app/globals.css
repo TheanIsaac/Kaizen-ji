@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 160 100% 50%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 180 100% 42%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 160 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors for WHOOP theme */
+    --recovery-green: 150 100% 50%;
+    --strain-blue-start: 210 80% 50%;
+    --strain-blue-end: 220 85% 34%;
+    --highlight-cyan: 180 100% 42%;
+    --text-primary: 0 0% 95%;
+    --text-secondary: 0 0% 80%;
+    --bg-primary: 0 0% 10%;
+    --bg-secondary: 0 0% 15%;
+    --bg-tertiary: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    /* Make sure there's a space between these two classes */
+    @apply bg-[#121212];
+    @apply text-[#E0E0E0];
+  }
+}
+
+/* Animation keyframes */
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    border-image: linear-gradient(90deg, #00ff85, #00bcd4, #00ff85) 1;
+    opacity: 0.5;
+  }
+  50% {
+    border-image: linear-gradient(180deg, #00ff85, #00bcd4, #00ff85) 1;
+    opacity: 1;
+  }
+  100% {
+    border-image: linear-gradient(270deg, #00ff85, #00bcd4, #00ff85) 1;
+    opacity: 0.5;
+  }
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 133, 0.3);
+    border-color: rgba(0, 255, 133, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 133, 0.7), 0 0 20px rgba(0, 188, 212, 0.4);
+    border-color: rgba(0, 255, 133, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 133, 0.3);
+    border-color: rgba(0, 255, 133, 0.7);
+  }
+}
+
+@keyframes fadeInBadge {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pointToDashboard {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add these animations to your globals.css file */
+@keyframes pulse-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Animation classes */
+.animate-shine {
+  animation: shine 2s linear infinite;
+}
+
+.animate-border-glow {
+  animation: borderGlow 2s ease-in-out;
+}
+
+.animate-fade-in-badge {
+  animation: fadeInBadge 0.5s ease-out forwards;
+}
+
+.animate-point-to-dashboard {
+  animation: pointToDashboard 2s ease-in-out infinite;
+}
+
+.animate-pulse-horizontal {
+  animation: pulse-horizontal 2s infinite;
+}
+
+.animate-wave {
+  animation: wave 1.5s infinite;
+}
+
+.animate-bounce-right {
+  animation: bounce-right 1s infinite;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Utility classes */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Text effects */
+.text-gradient-blue {
+  background: linear-gradient(90deg, #1e88e5, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neon-green {
+  color: #00ff85;
+  text-shadow: 0 0 5px rgba(0, 255, 133, 0.5);
+}
+
+.neon-blue {
+  color: #1e88e5;
+  text-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+}
+
+.neon-cyan {
+  color: #00bcd4;
+  text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Card styles */
+.card-dark {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-dark-hover:hover {
+  background-color: #252525;
+  transition: background-color 0.2s ease;
+}
+
+/* Gradient backgrounds */
+.bg-dark-blue-gradient {
+  background: linear-gradient(to bottom, #1e3a5f, #121212);
+}
+
+.bg-dark-header-gradient {
+  background: linear-gradient(to bottom, #121824, #121212);
+}
+
