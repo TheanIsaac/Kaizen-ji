@@ -1,30 +1,32 @@
-# UI screenshot recreation
+AI Workout Generator
+A personalized workout application that leverages AI to create customized fitness routines based on user preferences, goals, and performance data.
+Features
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Personalized Assessment: Comprehensive questionnaire to gather fitness goals, experience level, available equipment, and preferences
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/theanisaacs-projects/v0-ui-screenshot-recreation)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/sKqaNoulGXu)
+AI-Powered Workouts: Custom workout plans generated using advanced language models based on your specific needs
 
-## Overview
+Adaptive Programming: Workouts automatically adjust difficulty based on your performance and feedback
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+Progress Tracking: Log and monitor your health metrics to visualize improvements
 
-## Deployment
+Workout Calendar: Calendar view showing completed workouts and upcoming sessions
 
-Your project is live at:
+Technology Stack
 
-**[https://vercel.com/theanisaacs-projects/v0-ui-screenshot-recreation](https://vercel.com/theanisaacs-projects/v0-ui-screenshot-recreation)**
+Frontend: React.js for a responsive and interactive user interface
+Backend:
 
-## Build your app
+AWS Lambda functions for serverless computing
+Amazon DynamoDB for secure user data storage
+LLM integration for intelligent workout generation
 
-Continue building your app on:
 
-**[https://v0.dev/chat/projects/sKqaNoulGXu](https://v0.dev/chat/projects/sKqaNoulGXu)**
 
-## How It Works
+How It Works
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Sign in with your unique user ID
+Complete the fitness assessment questionnaire
+Receive your AI-generated personalized workout plan
+Log your workout completion and performance metrics
+Watch as your future workouts adapt based on your progress
